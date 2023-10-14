@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>007 - Perguntas e Respostas</title>
+
+    <link rel="stylesheet" href="style7.css" />
+</head>
+
+<body>
+    <!-- Crie um jogo de perguntas e respostas. O programa deverá sortear aleatoriamente um estado brasileiro e o jogador deverá responder informando qual é a respectiva capital.
+
+    Cadastrar todos os estados Brasileiros e suas respectivas capitais.
+    Permitir 4 jogadores.
+    A cada acerto é somado 1 ponto para o jogador.
+    Ao final do jogo, informar quem ganhou e sua respectiva pontuação (poderá haver empates).
+    Apresentar os resultados em ordem decrescente (do primeiro ao ultimo colocado).
+    -->
+    <h1>007 - Perguntas e Respostas</h1>
+
+    <form action="">
+        <fieldset class="containerCadastro"> <!-- CADASTRO JOGADORES -->
+            <legend>Quantos jogadores serão?</legend>
+
+            <!-- BOTÃO SELEÇÃO Nº JOGADORES -->
+            <div class="botoes">
+                <input type="button" value="1 Jogador" onclick="quantJogadores(1)" />
+                <input type="button" value="2 Jogadores" onclick="quantJogadores(2)" />
+                <input type="button" value="3 Jogadores" onclick="quantJogadores(3)" />
+                <input type="button" value="4 Jogadores" onclick="quantJogadores(4)" />
+            </div>
+
+            <!-- CADASTRO DE JOGADORES -->
+            <div class="cadastro">
+                <label for="idCadastroJogador">Nome:</label>
+                <input type="text" name="nmJogador" id="idCadastroJogador" />
+                <input type="button" value="Cadastrar" onclick="cadastrarJogadores()" />
+            </div>
+
+            <output></output>
+        </fieldset>
+
+        <fieldset class="containerPerguntas"> <!-- PERGUNTAS -->
+            <legend>Perguntas</legend>
+
+            <div>
+                <h2 id="idEstadoAleatorio">Estado Aleatório</h2>
+                <p id="idJogadorPergunta">Jogador</p>
+
+                <!-- SELECT OPÇÕES -->
+                <div>
+                    <input list="idCapitais" id="inputCapitais">
+                    <datalist id="idCapitais">
+                        <!-- Opções serão preenchidas via JavaScript -->
+                    </datalist>
+
+                    <!-- BOTÃO ENVIAR -->
+                    <input type="button" value="Enviar" onclick="enviarResposta()" />
+                </div>
+            </div>
+
+            <output></output>
+        </fieldset>
+
+        <fieldset class="fimDeJogo"> <!-- FIM DE JOGO -->
+            <legend>Fim de Jogo</legend>
+
+            <div><h2>Ranking</h2></div>
+
+            <div class="ranking">
+            </div>
+        </fieldset>
+    </form>
+
+    <script src="main7.js"></script>
+</body>
+
+</html>

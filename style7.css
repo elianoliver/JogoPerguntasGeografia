@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+form fieldset {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    gap: 10px;
+}
+
+.containerCadastro{
+    & .botoes > input[type=button]{
+        /* display: none; */
+        width: 100px;
+        height: 50px;
+        border-radius: 10px;
+        border: 1px solid #ccc;
+        background-color: #ccc;
+        color: rgb(255, 255, 255);
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    & .cadastro{
+        display: none;
+    }
+}
+
+.containerPerguntas{
+    display: none;
+
+    & div > h2{
+        width: 100%;
+        margin: 0;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    & div > p {
+        text-decoration: underline red wavy 1px;
+    }
+
+    & div > div{
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+    }
+}
+
+.fimDeJogo{
+    display: none;
+
+    & div{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    & div > h2{
+        width: 100%;
+        margin: 0;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    & div > p{
+        /* width: 100%; */
+        /* margin: 0 auto; */
+        height: 50px;
+        vertical-align: center;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+    }
+}
